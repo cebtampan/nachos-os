@@ -4,11 +4,11 @@ import nachos.machine.Machine;
 import nachos.machine.SerialConsole;
 import nachos.threads.Semaphore;
 
-public class NewConsoles {
+public class CustConsoles {
 	private SerialConsole sc = Machine.console();
 	private Semaphore s = new Semaphore(0);
 	private String buffer = "";
-	public NewConsoles() {
+	public CustConsoles() {
 		Runnable recieve = new Runnable() {
 			
 			@Override
@@ -47,7 +47,9 @@ public class NewConsoles {
 	public void printInt(Integer args) {
 		print(args.toString());
 	}
-	
+	public void println(String args) {
+		print(args + "\n");
+	}
 	public Integer readInt() {
 		return Integer.parseInt(readLine());
 	}

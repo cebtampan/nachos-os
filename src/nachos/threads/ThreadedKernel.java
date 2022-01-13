@@ -6,7 +6,7 @@ import nachos.machine.FileSystem;
 import nachos.machine.Kernel;
 import nachos.machine.Lib;
 import nachos.machine.Machine;
-import nachos.proj1.NewMain;
+import nachos.proj1.Main;
 
 /**
  * A multi-threaded OS kernel.
@@ -65,7 +65,7 @@ public class ThreadedKernel extends Kernel {
      * nothing.
      */
     public void run() {
-    	new NewMain();
+    	new Main();
     }
 
     /**
